@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆形特效</title>
+</head>
+<style type="text/css">
+    #circle-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .btn-container {
+        position: relative;
+    }
+    button {
+        border: 0;
+        border-radius: 50px;
+        color: white;
+        background:#5f55af;
+        padding: 15px 20px 16px 60px;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #f72585 50%, #5f55af 50%);
+        background-size: 200% 100%;
+        background-position: right ;
+        transition: all 2s ease;
+    }
+
+    svg {
+        background: #f72585;
+        padding: 8px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    button:hover {
+        background-position: left ;
+        /*background-color: #5f55af;*/
+    }
+
+    #back {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 222;
+    }
+
+</style>
+<body>
+<div id="back"><a href="javascript:history.back();">返回</a></div>
+<div id="circle-btn">
+    <div class="btn-container">
+        <svg t="1617718548382" class="icon" viewBox="0 0 1024 1024" version="1.1"
+             xmlns="http://www.w3.org/2000/svg" p-id="1799" width="30" height="30"><path d="M989.867 482.133l-392.534-371.2c-17.066-17.066-42.666-17.066-59.733 0-17.067 17.067-17.067 42.667 0 59.734l315.733 298.666H64c-25.6 0-42.667 17.067-42.667 42.667S38.4 554.667 64 554.667h789.333L537.6 853.333c-17.067 17.067-17.067 42.667 0 59.734 8.533 8.533 21.333 12.8 29.867 12.8 8.533 0 21.333-4.267 29.866-12.8l392.534-371.2c8.533-8.534 12.8-21.334 12.8-29.867s-4.267-21.333-12.8-29.867z" p-id="1800" fill="#ffffff"></path></svg>
+        <button>Hover me</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆角特效</title>
+</head>
+<style type="text/css">
+    #border-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    button {
+        border: 0;
+        border-radius: 10px;
+        background: #2ec4b6;
+        text-transform: uppercase;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px 30px;
+        outline: none;
+        position: relative;
+        -webkit-transition: border-radius 3s;
+        -moz-transition: border-radius 3s;
+        -ms-transition: border-radius 3s;
+        -o-transition: border-radius 3s;
+        transition: border-radius 3s;
+    }
+    button:hover {
+        border-radius: 50px 10px 50px 10px;
+    }
+
+
+    #back {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 222;
+    }
+
+</style>
+<body>
+<div id="back"><a href="javascript:history.back();">返回</a></div>
+<div id="border-btn">
+    <button>Hover me</button>
+</div>
+</body>
+</html>
