@@ -17,5 +17,3 @@ npm install gulp browser-sync --save-dev
 ```shell
 gulp server
 ```
-
-a
