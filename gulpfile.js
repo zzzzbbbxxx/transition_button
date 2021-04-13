@@ -1,8 +1,16 @@
-const { watch } = require('gulp');
+const { src, dest , watch } = require('gulp');
 const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
 const reload = browserSync.reload;
 
-function server(cb) {
+function css() {
+    return src('src/scss/**/*.scss')
+        .pipe(sass())
+        .pipe(dest('src/css'))
+        .pipe(reload())
+}
+
+function server() {
     browserSync.init({
         server: {
             baseDir: 'src',
@@ -10,6 +18,7 @@ function server(cb) {
         }
     })
     watch('src/*.html').on('all', reload);
+    watch('src/scss/**/*.scss', css);
 }
 
 exports.server = server;
